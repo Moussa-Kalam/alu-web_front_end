@@ -335,7 +335,7 @@ ul.row {
   margin-right: auto;
 }
 
-.row::before {
+.row::after {
   content: "";
   display: table;
   clear: both;
