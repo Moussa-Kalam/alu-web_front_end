@@ -407,10 +407,6 @@ ul.row {
   background: transparent;
 }
 
-.header-logo {
-  position: var(--header-logo-position);
-}
-
 .header-container {
   display: flex;
   justify-content: space-between;
