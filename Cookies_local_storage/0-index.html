@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic cookie</title>
+  </head>
+  <body>
+    <form>
+      <label>
+        First Name
+        <input type="text" id="firstname" /></label
+      ><label> Email<input type="email" id="email" /></label>
+      <button onclick="setCookies()">Log me in</button>
+      <button onclick="showCookies()">Show the cookies</button>
+    </form>
+    <script>
+      function setCookies() {
+        event.preventDefault();
+        const firstName = document.querySelector("#firstname").value;
+        const email = document.querySelector("#email").value;
+
+        document.cookie = `firstname=${firstName}`;
+        document.cookie = `email=${email}`;
+
+        // Reset the input values after submission
+        document.querySelector("#firstname").value = "";
+        document.querySelector("#email").value = "";
+      }
+
+      function showCookies() {
+        event.preventDefault();
+        const paragraph = document.createElement("p");
+        paragraph.innerHTML = `Cookies: ${document.cookie}`;
+
+        document.body.appendChild(paragraph);
+      }
+    </script>
+  </body>
+</html>
